@@ -1,0 +1,108 @@
+
+<nav role="navigation" class="navbar navbar-default">
+ 
+ <div class="navbar-collapse">
+ 
+     <ul class="nav navbar-nav">
+         <li><a href="/welcome">Home</a></li>
+         <li><a href="/ort/list-ort"><spring:message code="navigation.location"/></a></li>
+         <li><a href="/kunde/list-kunden"><spring:message code="navigation.customer"/></a></li>
+         <li><a href="/contact/list-kontakte"><spring:message code="navigation.contact"/></a></li>
+         <li><a href="/nutzen/list-nutzen?size=10&kunde=0&sucheMit=null&mitarbeiter=0"><spring:message code="navigation.overview"/></a></li>
+         
+         <c:if test="${pageContext.request.userPrincipal.authorities == '[ROLE_ADMIN]'}">
+         
+         	<li><a href="/user/list-user"><spring:message code="navigation.user"/></a></li>
+         	<li><a href="/taetigkeit/list-taetigkeiten"><spring:message code="navigation.activity"/></a></li>
+         	<li><a href="/vorortbetreuung/list-vorobs"><spring:message code="navigation.locationSupport"/></a></li>
+         	<li><a href="/vertrag/list-vertrag"><spring:message code="navigation.contract"/></a></li>
+          	
+         </c:if>
+     </ul>
+     <c:if test="${pageContext.request.userPrincipal.name != null}">
+     <ul class="nav navbar-nav navbar-right" >
+     	<li style="vertical-align: middle; text-align: center;padding: 18px">
+     	<div style="">
+     		  <img id="langImageEn" src="${pageContext.request.contextPath}/images/english2.png" value="en" onMouseOver="this.style.cursor='pointer'">
+       &nbsp;|&nbsp;
+       <img id="langImageDe" src="${pageContext.request.contextPath}/images/german.png" value="de" onMouseOver="this.style.cursor='pointer'">
+       </div>
+      </li>
+      
+      
+      <li>
+     	<div style="vertical-align: middle;" class="dropdown">
+     	<img alt="" src="${pageContext.request.contextPath}/images/user.png" style="padding-top: 13px" onclick="myFunction()" class="dropbtn">
+     	
+     	<div id="myDropdown" class="dropdown-content">
+    <a href="/user/mein-konto"><spring:message code="label.myAccountTitle"/></a>
+    <a href="/user/password-change"><spring:message code="label.buttonChancePassword"/></a>
+    
+    
+  </div>
+		</div>
+		
+		
+		</li>
+		
+		
+		
+    
+     	<li>&nbsp&nbsp&nbsp&nbsp</li>
+         <li style="text-align: center; vertical-align: middle;">
+         <form id="logoutForm" method="POST" action="${contextPath}/logout" style="padding: 10px 10px">
+            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+            <input type="submit" value="<spring:message code="navigation.buttonLogout"/>" class="btn-warning"  />
+        </form>
+        
+        
+    <!-- <a onclick="document.forms['logoutForm'].submit()">Logout</a> -->
+   
+  </li>
+     </ul>
+     </c:if>
+ </div>
+</nav>
+<script type="text/javascript">
+   var langImageEn = document.getElementById("langImageEn");
+   var langImageDe = document.getElementById("langImageDe");
+   
+   langImageEn.onclick = function() {
+	   window.location.replace('?lang=' + langImageEn.getAttribute("value"));
+	   }
+   
+   langImageDe.onclick = function() {
+	   window.location.replace('?lang=' + langImageDe.getAttribute("value"));
+	   }
+</script>
+<script>
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+} 
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#locales").change(function () {
+            var selectedOption = $('#locales').val();
+            if (selectedOption != '') {
+                window.location.replace('?lang=' + selectedOption);
+            }
+        });
+    });
+</script>

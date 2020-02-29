@@ -1,0 +1,25 @@
+<script>
+	var kunde = document.getElementById("kunde");
+	
+	kunde.addEventListener ("change", function() {
+		
+		window.location.replace('?k_id=' + this.value);
+	});
+</script>
+
+<c:forEach items="${allOrte}" var="ort">
+				
+					<c:forEach items="${allVorOB}" var="vorOB">
+					
+						<c:choose>
+							<c:when test="${vorOB.kunde.kundeId==kid && vorOB.ort.ortId==ort.ortId}">
+								
+														
+								<option value="${ort.ortId}" >${ort.ortname} / ${ort.land}</option>
+							</c:when>
+						</c:choose>
+						
+					</c:forEach>
+				
+				
+				</c:forEach>

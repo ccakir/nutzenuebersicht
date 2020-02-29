@@ -1,0 +1,339 @@
+/* The message box is shown when the user clicks on the password field */
+#location_message {
+  display:none;
+  background: #f1f1f1;
+  color: #000;
+  position: relative;
+  padding: 5px;
+  margin-top: 5px;
+}
+
+#location_message p {
+  padding: 2px 35px;
+  font-size: 13px;
+}
+#email_message {
+  display:none;
+  background: #f1f1f1;
+  color: #000;
+  position: relative;
+  padding: 5px;
+  margin-top: 5px;
+}
+
+#email_message p {
+  padding: 2px 35px;
+  font-size: 13px;
+}
+#username_message {
+  display:none;
+  background: #f1f1f1;
+  color: #000;
+  position: relative;
+  padding: 5px;
+  margin-top: 5px;
+}
+
+#username_message p {
+  padding: 2px 35px;
+  font-size: 13px;
+}
+#confirm_message {
+  display:none;
+  background: #f1f1f1;
+  color: #000;
+  position: relative;
+  padding: 5px;
+  margin-top: 5px;
+}
+
+#confirm_message p {
+  padding: 2px 35px;
+  font-size: 13px;
+}
+#lastname_message {
+  display:none;
+  background: #f1f1f1;
+  color: #000;
+  position: relative;
+  padding: 5px;
+  margin-top: 5px;
+}
+
+#lastname_message p {
+  padding: 2px 35px;
+  font-size: 13px;
+}
+#firstname_message {
+  display:none;
+  background: #f1f1f1;
+  color: #000;
+  position: relative;
+  padding: 5px;
+  margin-top: 5px;
+}
+
+#firstname_message p {
+  padding: 2px 35px;
+  font-size: 13px;
+}
+#message {
+  display:none;
+  background: #f1f1f1;
+  color: #000;
+  position: relative;
+  padding: 5px;
+  margin-top: 10px;
+}
+
+#message p {
+  padding: 2px 35px;
+  font-size: 13px;
+}
+#message h6 {
+    font-size: 15px;
+}
+
+/* Add a green text color and a checkmark when the requirements are right */
+.valid {
+  color: green;
+}
+
+.valid:before {
+  position: relative;
+  left: -35px;
+  content: url("../../images/icon_ok.png");
+}
+
+/* Add a red text color and an "x" icon when the requirements are wrong */
+.invalid {
+  color: red;
+}
+
+.invalid:before {
+  position: relative;
+  left: -35px;
+  content: url("../../images/icon_nok.png");
+}
+.dropbtn {
+  background-color: none;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+  background-color: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+.btn-suche {
+    color: #fff;
+    background-color:maroon;
+    border-color: maroon;
+    vertical-align: top;
+}
+
+.btn-suche.focus, .btn-suche:focus {
+    color: #fff;
+    background-color: maroon;
+    
+}
+
+.btn-suche:hover {
+    color: #fff;
+    background-color: maroon;
+   
+}
+
+.btn-suche.active, .btn-suche:active, .open > .dropdown-toggle.btn-suche {
+    color: #fff;
+    background-color: #31b0d5;
+    border-color: #269abc
+}
+
+.btn-suche.active.focus, .btn-suche.active:focus, .btn-suche.active:hover, .btn-suche:active.focus, .btn-suche:active:focus, .btn-suche:active:hover, .open > .dropdown-toggle.btn-suche.focus, .open > .dropdown-toggle.btn-suche:focus, .open > .dropdown-toggle.btn-suche:hover {
+    color: #fff;
+    background-color: #269abc;
+    border-color: #1b6d85
+}
+
+.btn-suche.active, .btn-suche:active, .open > .dropdown-toggle.btn-suche {
+    background-image: none
+}
+
+.btn-suche.disabled, .btn-suche.disabled.active, .btn-suche.disabled.focus, .btn-suche.disabled:active, .btn-suche.disabled:focus, .btn-suche.disabled:hover, .btn-suche[disabled], .btn-suche[disabled].active, .btn-suche[disabled].focus, .btn-suche[disabled]:active, .btn-suche[disabled]:focus, .btn-suche[disabled]:hover, fieldset[disabled] .btn-suche, fieldset[disabled] .btn-suche.active, fieldset[disabled] .btn-suche.focus, fieldset[disabled] .btn-suche:active, fieldset[disabled] .btn-suche:focus, fieldset[disabled] .btn-info:hover {
+    background-color: #5bc0de;
+    border-color: #46b8da
+}
+
+.btn-suche .badge {
+    color: #5bc0de;
+    background-color: #fff
+}
+
+.headerPageSize {
+	text-align: right;
+	padding: 5px 20px 0px 0px;
+	
+}
+.headerPageSize p{
+	display : inline;
+ 	padding: 0px 4px 0px 50px;
+ 	font-size: 15px;
+	
+}
+.headerPageSize label{
+	font-weight: normal;
+}
+.headerPageSize h1{
+	font-weight: bold;
+	
+}
+.headerPageSize select, input{
+	padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s
+	
+}
+.headerPageSize form{
+	display: inline;
+}
+.dotgreen {
+  height: 25px;
+  width: 25px;
+  background-color: green;
+  border-radius: 50%;
+  display: inline-block;
+}
+.dotred {
+  height: 25px;
+  width: 25px;
+  background-color: red;
+  border-radius: 50%;
+  display: inline-block;
+}
+.error {
+    color: red;
+    font-size: 90%;
+}
+.vonbiserror{
+	display:inline;
+	color: red;
+    font-size: 90%;
+}
+h5{
+	display:inline;
+    background-color:orange;
+    
+}
+.header_button{
+	padding-left: 20px;
+	
+}
+.form-control2 {
+	 pointer-events: none;
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color:silver;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s
+}
+
+.form-control2:focus {
+    border-color: #66afe9;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6)
+}
+
+.form-control2::-moz-placeholder {
+    color: #999;
+    opacity: 1
+}
+
+.form-control2:-ms-input-placeholder {
+    color: #999
+}
+
+.form-control2::-webkit-input-placeholder {
+    color: #999
+}
+
+.form-control2[disabled], .form-control[readonly], fieldset[disabled] .form-control {
+    background-color: #eee;
+    opacity: 1
+}
+
+.form-control2[disabled], fieldset[disabled] .form-control {
+    cursor: not-allowed
+}
+
+textarea.form-control2 {
+    height: auto
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+    input[type=date].form-control1, input[type=time].form-control1, input[type=datetime-local].form-control1, input[type=month].form-control1 {
+        line-height: 34px
+    }
+
+    .input-group-sm input[type=date], .input-group-sm input[type=time], .input-group-sm input[type=datetime-local], .input-group-sm input[type=month], input[type=date].input-sm, input[type=time].input-sm, input[type=datetime-local].input-sm, input[type=month].input-sm {
+        line-height: 30px
+    }
+
+    .input-group-lg input[type=date], .input-group-lg input[type=time], .input-group-lg input[type=datetime-local], .input-group-lg input[type=month], input[type=date].input-lg, input[type=time].input-lg, input[type=datetime-local].input-lg, input[type=month].input-lg {
+        line-height: 46px
+    }
+}
