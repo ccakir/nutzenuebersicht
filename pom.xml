@@ -9,9 +9,9 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.cakirilhan</groupId>
-	<artifactId>KundeManagement</artifactId>
+	<artifactId>NutzenUebersicht</artifactId>
 	<version>1.0</version>
-	<name>KundeManagement</name>
+	<name>NutzenÜbersicht</name>
 	<description>SpringBoot + JPA + ApacheTiles + JSP</description>
 
 	<properties>

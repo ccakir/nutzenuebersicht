@@ -12,7 +12,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.cakirilhan.KundeManagementApplication;
+import com.cakirilhan.App;
 import com.cakirilhan.domain.kunde.Kontakt;
 import com.cakirilhan.domain.kunde.Kunde;
 import com.cakirilhan.domain.kunde.repository.KontaktRepository;

@@ -8,14 +8,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.cakirilhan.KundeManagementApplication;
+import com.cakirilhan.App;
 import com.cakirilhan.domain.kunde.Kunde;
 import com.cakirilhan.domain.kunde.repository.KundeRepository;
 import com.cakirilhan.domain.kunde.repository.service.KundeService;
 import com.cakirilhan.domain.kunde.service.impl.KundeServiceImpl;
 
 
-@SpringBootTest(classes=KundeManagementApplication.class)
+@SpringBootTest(classes=App.class)
 public class KundeServiceImplIntegrationTest {
 	
 	@Autowired

@@ -21,16 +21,16 @@ import com.cakirilhan.domain.user.User;
 
 @SpringBootApplication
 
-public class KundeManagementApplication extends SpringBootServletInitializer {
+public class App extends SpringBootServletInitializer {
 	
 	
 	@Override
 	 protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-	        return application.sources(KundeManagementApplication.class);
+	        return application.sources(App.class);
 	    }
 
 	public static void main(String[] args) {
-		SpringApplication.run(KundeManagementApplication.class, args);
+		SpringApplication.run(App.class, args);
 		
 	}
 @PostConstruct

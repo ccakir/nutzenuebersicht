@@ -12,14 +12,14 @@ import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabas
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import com.cakirilhan.KundeManagementApplication;
+import com.cakirilhan.App;
 import com.cakirilhan.domain.kunde.Ort;
 import com.cakirilhan.domain.kunde.repository.OrtRepository;
 import com.cakirilhan.domain.kunde.service.impl.OrtServiceImpl;
 
 @ActiveProfiles("test")
 @RunWith(SpringJUnit4ClassRunner.class)
-@SpringBootTest(classes = KundeManagementApplication.class)
+@SpringBootTest(classes = App.class)
 @AutoConfigureTestDatabase
 @ExtendWith(MockitoExtension.class)
 public class OrtTest {
