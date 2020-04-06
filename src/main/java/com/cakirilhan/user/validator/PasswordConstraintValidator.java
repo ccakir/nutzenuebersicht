@@ -11,8 +11,6 @@ import org.passay.PasswordValidator;
 import org.passay.RuleResult;
 import org.passay.WhitespaceRule;
 
-import com.google.common.base.Joiner;
-
 
 public class PasswordConstraintValidator implements ConstraintValidator<ValidPassword, String>{
 
